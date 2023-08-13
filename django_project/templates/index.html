@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <link rel="icon" href="ttglogo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <title>TTG´s Officiella Hemsida</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link
+        href="https://cdn.jsdelivr.net/gh/fontenele/bootstrap-navbar-dropdowns@5.0.2/dist/css/bootstrap-navbar-dropdowns.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body id="">
+    {% load static %}
+    <style>
+        body { 
+    
+    font-family: sans-serif;
+    background-color: #ededed;
+    color: #d6d6d6;
+    background-color: #202121;
+    background-size: 100%, 100%;
+  
+}img.resize {
+    width: 100%; /* you can use % */
+    height: 100%;
+}
+#centralize{
+    text-align: center;
+
+}
+.card{
+    margin: 20px;
+    border: 3px solid #C5EAFA ;
+    background-color: #ff4785;
+    width: 200px;
+    height: 260px;
+    border-radius: 12px;
+}
+#mbr{
+    margin-left: 55px;
+    margin-top: 65px;
+}
+        </style>
+    <style id="style">
+
+    </style>
+    <script>
+        fetch("https://ttg.leadattic953788.repl.co/styles/get_style?name=" + localStorage.getItem("styleInUse")).then(response => response.json()).then(data => document.getElementById("style").innerHTML = data.response);
+    </script>
+
+    <!-- redirect to rusgov-->
+    <!--<script>
+    window.location.href = "https://ttgwebsite.leadattic953788.repl.co/rusgov.html"
+  </script>-->
+
+    <!-- comment out if not needed-->
+
+
+    <div class="navbar navbar-expand-md navbar-dark" role="navigation" style="background: ;">
+        <a class="navbar-brand" href="#"><img width=70 height=70 style="margin-right: 12px;" src="https://i.imgur.com/kCebSBm.png"><span class="TitleText" style="margin-top: 40px;">Talande Tregår Gruppen</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><span class="TitleText">Hem</span>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/games"><span class="TitleText">Spel</span>
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"><span class="TitleText">Spelet</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                        <li class="dropdown-item"><a href="game/game.html"" target=" _blank">Spela spelet</a></li>
+                        <li class="dropdown-item dropdown">
+                            <a class="dropdown-toggle" id="dropdown1-1" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">Devlogs</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1-1">
+                                <li class="dropdown-item"><a href="devlogs/Number1.html">Devlog Prototype 1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>-->
+
+
+            </ul>
+            <form class="form-inline mt-2 mt-md-0">
+
+            </form>
+        </div>
+    </div>
+    <!--<nav style="background: greenyellow; padding-bottom: 0px; padding-top: 0px; display: flex; justify-content: space-between; margin: 0px; ">
+            <h2>Logo</h2>
+            <div style="display: flex; justify-content: ; color: black; text-decoration: none;">
+                <p><a href="game/game.html">Spel</a></p>
+
+            </div>
+            <div></div>
+           
+        </nav> -->
+
+
+
+
+    <!-- TTG-web starts here-->
+    <div id='mbr'>
+        <h1>Välkommen till TTG´s <b>nya</b> hemsida</h1>
+        <div id="accShit">
+
+        </div>
+        <h2>Nyheter</h2>
+        <ul>
+            <li>TTG har en ny hemsida, denna</li>
+        </ul>
+        <h2>Om TTG</h2>
+        <h3>TTG´s medlemmar</h3>
+        <div style="display: flex; justify-content: left;">
+            <!-- byt justify content till center om du vill centrera korten -->
+            <div style="display: flex; justify-content: start; text-align:center;">
+                <div class="card ola">
+                    <h2>Ola</h2>
+                    Ledare av TTG<br>
+                    <p>Rik </p><a href="https://www.tiktok.com/@ttg_ola" target='_blank'> Olas TikTok</a>
+                    <a href="https://www.tiktok.com/@official_ttg.ola" target='_blank'> Olas TikTok</a>
+                    <br>
+                    <p>Moderat</p>
+                </div>
+                <div class="card">
+                    <h2>Åke</h2>
+                    <p>TTG´s ordförande</p>
+                    <a href="https://www.tiktok.com/@thefakeake" target="_blank">Åkes TikTok</a><a
+                        href="https://www.tiktok.com/@realake" target='_blank'>Åkes andra TikTok</a>
+                </div>
+                <div class="card bulten">
+                    <h2>Bulten</h2>
+                    <p>Lågt värde</p>
+                    <p>Cini-mini älskare</p>
+                    <a href="https://www.tiktok.com/@bultiboi209" target='_blank'>
+                        <p>Bultens TikTok</p>
+                    </a>
+                    <p>Varning: bits om provocerad</p>
+                    <p>Kommunist</p>
+                </div>
+            </div>
+        </div>
+        <h2>Vill du gå med i TTG</h2>
+        <p>I såna fall kan du ta TTG <a target='_blank' href="https://forms.office.com/e/mr5BuVg5p0">testet</a></p>
+        <p>För att gå med i TTG behöver du: </p>
+
+        <ul>
+            <li>Ha 75% eller mer på TTG-testet</li>
+            <li>Ha en 100% approval rate</li>
+            <li>Vara smalare än åke (BMI < 104.5)</li>
+            <li>Inte vara en pepparkaka</li>
+            <li>Inte vara snut</li>
+            <li>Inte vara g*nger</li>
+            <li>Vara en cooling </li>
+            <li>Inte vara vänsterpartist, moderat, eler kindelsticks</li>
+            <li>Äga minst ett par färgglada sockar</li>
+        </ul>
+        <h2>TTG´s hatlista</h2>
+        <script>
+            function tryHatLista(){
+                if(document.getElementById("hatListaPass").value != ""){
+                    window.location.href = "/hatlista?pass="+document.getElementById("hatListaPass")
+                }else{
+                    document.getElementById.innerHTML += "<br> <p><small>Ange ett värde i \"lösenord\" fältet</small></p>"
+                }
+                
+            }
+        </script>
+        <div id="hatListanDiv">
+        <input id="hatListaPass" type="password" placeholder="lösenord"> <button onclick="tryHatLista()">Gå till hatlistan</button>
+        </div>
+        <h2>Artiklar</h2>
+        <small>
+            <p>Kontakta TTG<br>TTG´s mail: talandetregargruppen@gmail.com</p>
+            <p><a href="https://forms.gle/H3PaJe6eVyuCa5QR7" target='_blank'>Ge feedback</a></p>
+            </p>
+            <p>Credits (de som är här )<br>
+            <ul>
+                <li>TTG</li>
+            </ul>
+        </small>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/fontenele/bootstrap-navbar-dropdowns@5.0.2/dist/js/bootstrap-navbar-dropdowns.min.js"></script>
+    <script>
+        $('.navbar').navbarDropdown({trigger: 'mouseover'});
+    </script>
+</body>
+
+</html>
