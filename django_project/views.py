@@ -94,28 +94,25 @@ def get_style(request):
 
 def js(request):
     # No longer in use as static files have been determined to be a better option. Therefore 410 Gone.
-    """
-    ame = request.GET.get("name")
-    base_path = "django_project/templates/"
+
+    name = request.GET.get("name")
+    base_path = "django_project/templates/js/"
     complete_path = base_path + name + ".js"
     file = open(complete_path, "r")
     content = file.read()
     file.close()
     return HttpResponse(content, status=200)
-    """
-    return HttpResponse("410: Gone", status=410)
+
 
 
 # Custom 404 & 500 pages
 def handler404(request, *args, **argv):
-    response = render_to_response('404.html', {},
-                                  context_instance=RequestContext(request))
+    response = render_to_response('404.html', {},context_instance=RequestContext(request))
     response.status_code = 404
     return response
 
 
 def handler500(request, *args, **argv):
-    response = render_to_response('500.html', {},
-                                  context_instance=RequestContext(request))
+    response = render_to_response('500.html', {},context_instance=RequestContext(request))
     response.status_code = 500
     return response
