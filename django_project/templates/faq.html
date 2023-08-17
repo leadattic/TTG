@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTG FAQ</title>
+  </head>
+   <style>
+        body { 
+    
+    font-family: sans-serif;
+    background-color: #ededed;
+    color: #d6d6d6;
+    background-color: #202121;
+    background-size: 100%, 100%;
+  
+}img.resize {
+    width: 100%; /* you can use % */
+    height: 100%;
+}
+#centralize{
+    text-align: center;
+
+}
+.card{
+    margin: 20px;
+    border: 3px solid #C5EAFA ;
+    background-color: #ff4785;
+    width: 200px;
+    height: 260px;
+    border-radius: 12px;
+}
+#mbr{
+    margin-left: 55px;
+    margin-top: 65px;
+}
+        </style>
+
+  <body>
+    <h1>Frequently asked questions</h1>
+      <p>Frågor som ofta frågas</p>
+      <hr>
+
+
+      <div id="wheninoffice">
+          <h2>Vad innebär att "TTG är tillgängligt"</h2>
+          <p>Att TTG är tillgängligt innebär att </p>
+      </div>
+       
+    <script>
+        // parts of code from https://www.scaler.com/topics/javacript-scroll-element/ and https://www.sitepoint.com/get-url-parameters-with-javascript/
+        
+        const url = window.location.search;
+        const urlParams = new URLSearchParams(url);
+        const elementId = urlParams.get('scrollto')
+        console.log(elementId)
+         scrollFunction()
+        
+      function scrollFunction() {
+        window.scroll(0, findPosition(document.getElementById(elementId)720));
+      }
+      function findPosition(obj) {
+        var currenttop = 0;
+        if (obj.offsetParent) {
+          do {
+            currenttop += obj.offsetTop;
+          } while ((obj = obj.offsetParent));
+          return [currenttop];
+        }
+      }
+       
+
+        
+       
+    </script>
+
+    </body>

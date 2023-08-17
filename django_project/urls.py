@@ -26,6 +26,5 @@ urlpatterns = [
     path('styles/get_style/', views.home_style),
     path('styles/home/', views.home_style),
     path('dashboard/', views.dashboard),
-    path('js/', views.js), 
-    
+    path('faq/', views.faq), 
 ]

@@ -92,18 +92,11 @@ def get_style(request):
         return HttpResponse(f"404: Style ${name} not found", status=404)
 
 
-def js(request):
-    # No longer in use as static files have been determined to be a better option. Therefore 410 Gone.
 
-    name = request.GET.get("name")
-    base_path = "django_project/templates/js/"
-    complete_path = base_path + name + ".js"
-    file = open(complete_path, "r")
-    content = file.read()
-    file.close()
-    return HttpResponse(content, status=200)
-
-
+def faq(request):
+    template = loader.get_template('faq.html')
+    return HttpResponse(template.render())
+    
 
 # Custom 404 & 500 pages
 def handler404(request, *args, **argv):
