@@ -17,14 +17,22 @@ from django.contrib import admin
 from django.urls import path
 from . import views, api
 
+
 urlpatterns = [
+    # Under main service
     path('', views.home),
-    path('games/', views.games),
     path('hatlista/', views.hatlista),
     path('api/', views.api_docs),
-    path('api/v1/', views.api),
-    path('styles/get_style/', views.home_style),
-    path('styles/home/', views.home_style),
-    path('dashboard/', views.dashboard),
+    path('styles/get_style/', views.get_style),
     path('faq/', views.faq), 
+
+    # Under games service
+    path('games/', views.games),
+
+    # Under api service
+    path('api/v1/', views.api),
+
+
+    # Not under any service
+    path('dashboard/', views.dashboard),
 ]
