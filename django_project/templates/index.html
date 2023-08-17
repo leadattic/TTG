@@ -178,7 +178,7 @@
         <script>
             function tryHatLista(){
                 if(document.getElementById("hatListaPass").value != ""){
-                    window.location.href = "/hatlista?pass="+document.getElementById("hatListaPass")
+                    window.location.href = "/hatlista?pass="+document.getElementById("hatListaPass").value
                 }else{
                     document.getElementById.innerHTML += "<br> <p><small>Ange ett värde i \"lösenord\" fältet</small></p>"
                 }

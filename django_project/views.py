@@ -71,7 +71,7 @@ def hatlista(request):
         <html>
 
         <script>
-        alert("Incorrect");
+        alert("Felaktigt lösenord");
         location="https://newttg.leadattic953788.repl.co/#"
         </script>
         </html>
@@ -81,9 +81,14 @@ def hatlista(request):
         """)
 
 
+def style_page(request):
+    template = loader.get_template('style.html')# TODO create style.html
+    return HttpResponse(template.render())
+    
+
 def get_style(request):
     name = request.GET.get("name").upper()
-    styles_raw = os.environ["STYLE-" + name]
+    styles_raw = os.environ["STYLE_" + name]
 
     try:
         return HttpResponse(json.dumps({"response": styles_raw}), status=200)
