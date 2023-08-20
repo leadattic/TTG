@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TTG Styling</title>
+    </head>
+
+    <body>
+        <style>
+        body { 
+    
+    font-family: sans-serif;
+    background-color: #ededed;
+    color: #d6d6d6;
+    background-color: #202121;
+    background-size: 100%, 100%;
+  
+}img.resize {
+    width: 100%; /* you can use % */
+    height: 100%;
+}
+#centralize{
+    text-align: center;
+
+}
+.card{
+    margin: 20px;
+    border: 3px solid #C5EAFA ;
+    background-color: #ff4785;
+    width: 200px;
+    height: 260px;
+    border-radius: 12px;
+}
+#mbr{
+    margin-left: 55px;
+    margin-top: 65px;
+}
+        </style>
+        <script>
+            console.log(localStorage.getItem("styles"))
+            if (localStorage.getItem("styles") == null){
+                localStorage.setItem("styles", "['default']")
+                localStorage.setItem("styleInUse", 'default')
+            }
+
+
+            function addStyle(){
+                if(fetch("https://newttg.leadattic953788.repl.co/styles/is_style/?name="+document.getElementById("styleInput").then(response => json()).then(data => console.log())))
+            }
+        </script>
+        <div style="height: 500px; display: flex;">
+            
+        </div>
+        <br>
+        <input id="styleInput"type="text" placeholder="Enter name of style to add"/>
+        <button onclick="addStyle()">Add style</button>
+    </body>
+</html>

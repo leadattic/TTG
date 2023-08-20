@@ -55,11 +55,19 @@ def hatlista(request):
         
         """)
 
-
-def style_page(request):
-    if json.loads(os.getenv("SERVICES"))['main'] != True: return HttpResponse("Access denied", status=403)
+def styles(request):
+    if json.loads(os.getenv("SERVICES"))['main'] != True: return HttpResponse("Access denied", status=403)           
     template = loader.get_template('style.html')  # TODO create style.html
-    return HttpResponse(template.render())
+    return HttpResponse(template.render())                                                        
+                                                                     
+
+
+def is_style(request):
+    
+    if " " + request.GET.get("name").upper() + " " in os.getenv("STYLE_NAMES"):
+        return HttpResponse(json.dumps({"response": True}))
+    else:
+        return HttpResponse(json.dumps({"response": False}))
 
 
 def get_style(request):

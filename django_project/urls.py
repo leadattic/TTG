@@ -25,6 +25,8 @@ urlpatterns = [
     path('api/', views.api_docs),
     path('styles/get_style/', views.get_style),
     path('faq/', views.faq), 
+    path('styles/', views.styles),
+    path('styles/is_style/', views.is_style),
 
     # Under games service
     path('games/', views.games),
